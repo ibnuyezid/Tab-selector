@@ -1,0 +1,103 @@
+.container {
+  position: relative;
+
+  min-height: 1.5rem;
+  width: 20em;
+  border: 0.05em solid #777;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  outline: none;
+}
+.container:focus {
+  border-color: hsl(200, 100%, 50%);
+}
+.value {
+  flex-grow: 1;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+.option-badges {
+  display: flex;
+  align-items: f center;
+  border: 0.05em solid #777;
+  border-radius: 0.25em;
+  padding: 0.15em 0.25em;
+  gap: 0.25em;
+  cursor: pointer;
+
+  background: none;
+  outline: none;
+}
+.clear-btn {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0px;
+  color: #777;
+  cursor: pointer;
+  font-size: 1.25em;
+}
+.clear-btn:focus,
+.clear-btn:hover {
+  color: #333;
+}
+.divider {
+  background-color: #777;
+
+  align-self: stretch;
+  width: 0.25em;
+}
+.caret {
+  border: 0.25em solid transparent;
+  translate: 0 25%;
+  border-top-color: #777;
+}
+.options {
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+  width: 100%;
+  position: absolute;
+  max-height: 15em;
+  overflow-y: auto;
+  border: 0.05em solid #777;
+  border-radius: 0.25em;
+  left: 0;
+  top: calc(100% + 0.25em);
+  background-color: #fff;
+  z-index: 100;
+  display: none;
+}
+.options.show {
+  display: block;
+}
+.option {
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+.option.selected {
+  background-color: hsl(200, 100%, 50%);
+}
+.option.highlighted {
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+}
+.option-badges:hover,
+.option-badges:focus {
+  background-color: hsl(0, 100%, 90%);
+  border-color: hsl(0, 100%, 50%);
+}
+
+.option-badges:hover > .remove-btn,
+.option-badges:focus > .remove-btn {
+  color: hsl(0, 100%, 50%);
+}
+
+.option-badges > .remove-btn {
+  font-size: 1.25em;
+  color: #777;
+}
